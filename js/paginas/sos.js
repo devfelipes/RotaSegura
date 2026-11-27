@@ -1,4 +1,5 @@
 verificarLogin();
+criarMenuInferior('inicio', null, true);
 
 const alerta = ultimoSOS();
 

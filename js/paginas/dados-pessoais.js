@@ -1,4 +1,5 @@
 verificarLogin();
+criarMenuInferior('perfil', null, true);
 
 const entregadorDaTela = dadosDoEntregador();
 const formularioDados = document.getElementById('form');

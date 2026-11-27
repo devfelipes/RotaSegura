@@ -1,4 +1,5 @@
 verificarLogin();
+criarMenuInferior('rota', null, true);
 
 const formularioOcorrencia = document.getElementById('form');
 const campoLocal = document.getElementById('local');

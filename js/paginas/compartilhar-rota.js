@@ -1,4 +1,5 @@
 verificarLogin();
+criarMenuInferior('perfil', null, true);
 
 document.getElementById('sw-master').outerHTML = interruptorHTML('ativo', dadosDoCompartilhamento().ativo, 'Compartilhamento de trajeto');
 const interruptorPrincipal = document.querySelector('input[name="ativo"]');

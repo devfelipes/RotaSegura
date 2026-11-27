@@ -14,7 +14,7 @@ function verificarLogin() {
   }
 }
 
-function criarMenuInferior(paginaAtual, nomeDaRota) {
+function criarMenuInferior(paginaAtual, nomeDaRota, somenteNoComputador) {
   const itens = [
     { id: 'inicio', link: 'index.html', icone: 'home', nome: 'Início' },
     { id: 'rota', link: 'jornada.html', icone: 'map', nome: nomeDaRota || 'Rota' },
@@ -35,7 +35,12 @@ function criarMenuInferior(paginaAtual, nomeDaRota) {
 
   const app = document.querySelector('.app');
   app.appendChild(menu);
-  app.classList.add('has-nav');
+
+  if (somenteNoComputador) {
+    menu.classList.add('so-computador');
+  } else {
+    app.classList.add('has-nav');
+  }
 }
 
 function mostrarAviso(texto, ehErro) {

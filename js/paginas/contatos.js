@@ -1,4 +1,5 @@
 verificarLogin();
+criarMenuInferior('perfil', null, true);
 
 const listaDeContatos = document.getElementById('lista');
 let menuAberto = null;
