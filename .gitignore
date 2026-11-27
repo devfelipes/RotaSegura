@@ -1,1 +1,6 @@
 *.pdf
+Dockerfile
+docker-compose.yml
+nginx.conf
+.dockerignore
+*.tar
