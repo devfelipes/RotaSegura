@@ -12,4 +12,4 @@ Com ele, o entregador pode:
 - acompanhar os ganhos e gastos do dia;
 - trocar avisos com outros entregadores da região.
 
-O projeto foi desenvolvido para a disciplina de Engenharia de Software da UCSAL. Ele usa apenas HTML, CSS e JavaScript.
+O projeto foi desenvolvido para a disciplina Processo de software - Engenharia de Software da UCSAL. Ele usa apenas HTML, CSS e JavaScript.
