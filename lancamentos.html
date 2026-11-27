@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2462eb">
+  <title>Detalhes de ganhos e gastos — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="profile-hero">
+      <div class="top">
+        <a class="icon-btn" href="financeiro.html" aria-label="Voltar"><i data-icon="arrow-left" data-size="22"></i></a>
+        <button class="icon-btn" id="add" aria-label="Adicionar lançamento"><i data-icon="sliders" data-size="22"></i></button>
+      </div>
+      <div class="profile-id">
+        <span id="avatar"></span>
+        <div style="min-width:0">
+          <div class="name" style="font-size:24px;line-height:1.2">Detalhes de ganhos e gastos</div>
+          <div class="mail" id="email"></div>
+          <span class="badge role"><i data-icon="shield-check" data-size="16"></i><span id="tipo"></span></span>
+        </div>
+      </div>
+      <a class="btn edit-btn" href="dados-pessoais.html"><i data-icon="pencil" data-size="20"></i>Editar perfil</a>
+    </header>
+
+    <div class="content">
+      <section class="card period-card">
+        <div class="hd">Saldo no período <span id="qtd">0 lançamentos</span></div>
+        <div class="big" id="saldo">R$ 0,00</div>
+        <div class="ft"><span class="green" id="g">Ganhos R$ 0,00</span><span class="red" id="c">Gastos R$ 0,00</span></div>
+      </section>
+
+      <div class="input-wrap">
+        <span class="ic-left blue"><i data-icon="calendar" data-size="22"></i></span>
+        <select class="select has-icon-left" id="periodo" style="padding-left:52px;border-radius:16px" aria-label="Período">
+          <option value="hoje">Hoje</option>
+          <option value="7">Últimos 7 dias</option>
+          <option value="semana">Esta semana</option>
+          <option value="mes">Este mês</option>
+          <option value="tudo">Todo o período</option>
+        </select>
+      </div>
+
+      <div>
+        <h2 style="font-size:16px;font-weight:600;color:var(--gray-600);margin-bottom:12px">Plataforma</h2>
+        <div class="chips" id="plats"></div>
+      </div>
+
+      <div id="grupos" style="display:flex;flex-direction:column;gap:16px"></div>
+      <p class="note-line" style="justify-content:center;font-size:13px"><span class="green"><i data-icon="check-circle" data-size="20"></i></span><span id="entregas"></span></p>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/financeiro-form.js"></script>
+  <script src="js/paginas/lancamentos.js"></script>
+</body>
+</html>

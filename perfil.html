@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2462eb">
+  <title>Perfil — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="profile-hero">
+      <div class="top">
+        <h1>Perfil e configurações</h1>
+        <a class="icon-btn" href="alertas.html" aria-label="Alertas"><i data-icon="bell" data-size="22"></i></a>
+      </div>
+      <div class="profile-id">
+        <span id="avatar"></span>
+        <div style="min-width:0">
+          <div class="name" id="nome"></div>
+          <div class="mail" id="email"></div>
+          <span class="badge role"><i data-icon="shield-check" data-size="16"></i><span id="tipo"></span></span>
+        </div>
+      </div>
+      <a class="btn edit-btn" href="dados-pessoais.html"><i data-icon="pencil" data-size="20"></i>Editar perfil</a>
+    </header>
+
+    <div class="content">
+      <section class="card menu-card">
+        <a class="mc-title" href="dados-pessoais.html">Conta <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="dados-pessoais.html">Dados pessoais <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="#" id="alterar-senha">Alterar senha <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="#" id="dois-fatores">Verificação em duas etapas <span class="tag" id="tag-2fa"></span><span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+      </section>
+
+      <section class="card menu-card">
+        <a class="mc-title" href="moto.html">Moto <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="moto.html">Informações da moto <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+      </section>
+
+      <section class="card menu-card">
+        <a class="mc-title" href="contatos.html">Segurança <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="contatos.html">Contatos de confiança <span class="tag" id="tag-contatos"></span><span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="config-sos.html">Configurações do SOS <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="compartilhar-rota.html">Compartilhamento de localização <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+      </section>
+
+      <section class="card menu-card">
+        <a class="mc-title" href="#" data-alerta-pausa>Jornada <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="#" data-alerta-pausa>Alertas de pausa e jornada <span class="tag" id="tag-pausa"></span><span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+      </section>
+
+      <section class="card menu-card">
+        <a class="mc-title" href="financeiro.html">Finanças <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="financeiro.html">Controle Financeiro <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="lancamentos.html">Detalhes de ganhos e gastos <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+      </section>
+
+      <section class="card menu-card">
+        <a class="mc-title" href="privacidade.html">Configurações e Privacidade <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+        <a class="item" href="privacidade.html">Privacidade <span class="ic"><i data-icon="chevron-right" data-size="20"></i></span></a>
+      </section>
+
+      <button class="btn btn-red" id="sair" style="font-weight:500">Sair</button>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/perfil.js"></script>
+</body>
+</html>

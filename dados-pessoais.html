@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2462eb">
+  <title>Dados pessoais — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app has-footer">
+    <header class="hero-back">
+      <div class="bar">
+        <a class="icon-btn" href="perfil.html" aria-label="Voltar"><i data-icon="arrow-left" data-size="22"></i></a>
+        <h1>Dados pessoais</h1>
+      </div>
+      <div class="profile-id" style="margin:0">
+        <label class="photo-wrap" for="foto" style="cursor:pointer">
+          <span id="avatar"></span>
+          <span class="cam"><i data-icon="camera" data-size="16"></i></span>
+        </label>
+        <div>
+          <div class="name" id="nome-topo"></div>
+          <span class="badge role" style="margin-top:6px"><i data-icon="shield-check" data-size="16"></i><span id="tipo"></span></span><br>
+          <label class="link-white" for="foto" style="cursor:pointer">Alterar foto de perfil</label>
+        </div>
+      </div>
+      <input type="file" id="foto" accept="image/*" hidden>
+    </header>
+
+    <form class="content" id="form" novalidate>
+      <section class="card form-stack">
+        <h2 class="h2" style="margin-bottom:-2px">Informações pessoais</h2>
+        <div class="field"><label class="field-label" for="nome">Nome completo</label><input class="input" id="nome" name="nome" autocomplete="name"></div>
+        <div class="field">
+          <span class="field-label">CPF <span class="hint">Somente leitura</span></span>
+          <div class="input-wrap"><input class="input readonly has-icon-right" id="cpf" readonly aria-label="CPF"><span class="ic-right"><i data-icon="lock" data-size="20"></i></span></div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label class="field-label" for="nascimento">Data de nascimento</label><input class="input" type="date" id="nascimento" name="nascimento"></div>
+          <div class="field"><label class="field-label" for="telefone">Telefone</label><input class="input" id="telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="(71) 90000-0000"></div>
+        </div>
+        <div class="field"><label class="field-label" for="email">E-mail</label><input class="input" type="email" id="email" name="email" autocomplete="email"></div>
+        <div class="field"><label class="field-label" for="cidade">Cidade</label>
+          <select class="select" id="cidade" name="cidade">
+            <option>Salvador, BA</option><option>Lauro de Freitas, BA</option><option>Camaçari, BA</option><option>Feira de Santana, BA</option>
+            <option>Aracaju, SE</option><option>Recife, PE</option><option>Fortaleza, CE</option><option>São Paulo, SP</option><option>Rio de Janeiro, RJ</option><option>Belo Horizonte, MG</option>
+          </select>
+        </div>
+        <div class="grid-2-1">
+          <div class="field"><label class="field-label" for="cnh">Número da CNH</label><input class="input" id="cnh" name="cnh" inputmode="numeric" maxlength="11"></div>
+          <div class="field"><label class="field-label" for="categoriaCnh">Categoria</label>
+            <select class="select" id="categoriaCnh" name="categoriaCnh"><option>A</option><option>AB</option><option>AC</option><option>AD</option><option>AE</option></select>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="h2">Plataformas em que trabalha</h2>
+        <p class="muted" style="font-size:12px;margin:6px 0 16px">Selecione uma ou mais opções.</p>
+        <div class="field"><div class="chips grid-3" id="plataformas" data-campo="plataformas"></div></div>
+      </section>
+    </form>
+
+    <div class="footer-bar">
+      <button class="btn btn-primary" type="submit" form="form" style="font-weight:500">Salvar alterações</button>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/dados-pessoais.js"></script>
+</body>
+</html>

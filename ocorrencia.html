@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3b82f6">
+  <title>Registrar Ocorrência — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app bg-gray has-footer">
+    <header class="topbar-blue light centered">
+      <a class="icon-btn" href="jornada.html" aria-label="Voltar"><i data-icon="arrow-left" data-size="22"></i></a>
+      <h1 class="title with-back">Registrar Ocorrência</h1>
+    </header>
+
+    <form class="content" id="form" novalidate>
+      <section class="card flat">
+        <h2 class="h2" style="margin-bottom:16px">O que aconteceu?</h2>
+        <div class="type-grid" id="tipos" data-campo="tipo"></div>
+      </section>
+
+      <section class="card flat form-stack" style="gap:14px">
+        <h2 class="h2">Local e Hora</h2>
+        <div class="field">
+          <span class="field-label">Localização <button type="button" class="hint" id="editar-local">Editar</button></span>
+          <div class="input-wrap">
+            <span class="ic-left"><i data-icon="pin" data-size="20"></i></span>
+            <input class="input loc has-icon-left has-icon-right" name="local" id="local" readonly value="Obtendo localização…" aria-label="Localização">
+            <button type="button" class="ic-right" id="lapis" aria-label="Editar localização"><i data-icon="pencil" data-size="20"></i></button>
+          </div>
+        </div>
+        <div class="field">
+          <span class="field-label">Data e Hora <span class="hint">Preenchido automaticamente</span></span>
+          <div class="input-wrap">
+            <span class="ic-left"><i data-icon="clock" data-size="20"></i></span>
+            <input class="input has-icon-left readonly" id="datahora" readonly aria-label="Data e hora">
+          </div>
+        </div>
+      </section>
+
+      <section class="card flat form-stack" style="gap:16px">
+        <h2 class="h2">Descrição e Evidências</h2>
+        <div class="field">
+          <textarea class="textarea" name="descricao" maxlength="600" placeholder="Descreva os detalhes da ocorrência..." aria-label="Descrição"></textarea>
+        </div>
+        <div id="foto-area">
+          <label class="upload-box" for="foto">
+            <i data-icon="camera" data-size="24"></i>+ Adicionar foto do veículo ou do local
+          </label>
+        </div>
+        <input type="file" id="foto" accept="image/*" capture="environment" hidden>
+      </section>
+
+      <section class="card flat" id="registradas-card" hidden>
+        <div class="section-hd" style="margin-bottom:14px"><h2>Ocorrências registradas</h2><span id="qtd"></span></div>
+        <div id="registradas"></div>
+      </section>
+    </form>
+
+    <div class="footer-bar">
+      <button class="btn btn-light" type="submit" form="form" id="enviar">Enviar Registro</button>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/ocorrencia.js"></script>
+</body>
+</html>

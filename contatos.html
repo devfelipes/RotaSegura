@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2462eb">
+  <title>Contatos de confiança — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app has-footer">
+    <header class="topbar-blue">
+      <a class="icon-btn" href="perfil.html" aria-label="Voltar"><i data-icon="arrow-left" data-size="22"></i></a>
+      <h1 class="title">Contatos de confiança</h1>
+    </header>
+
+    <div class="content">
+      <p style="font-size:14px;color:var(--gray-700);line-height:1.55">Essas pessoas recebem seu alerta SOS e podem acompanhar sua rota.</p>
+      <div class="count-line"><strong id="contagem"></strong><span class="badge blue sq" id="limite"></span></div>
+      <div id="lista" style="display:flex;flex-direction:column;gap:16px"></div>
+      <p class="muted small" id="nota"></p>
+    </div>
+
+    <div class="footer-bar">
+      <button class="btn btn-primary" id="adicionar"></button>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/contatos.js"></script>
+</body>
+</html>

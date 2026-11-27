@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a2a64">
+  <title>Entrar — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app bg-white">
+    <header class="auth-hero">
+      <img src="assets/img/logo.png" alt="RotaSegura — Segurança pra quem entrega">
+    </header>
+
+    <form class="auth-form" id="form" novalidate>
+      <div class="field">
+        <label class="field-label" for="email">E-mail</label>
+        <input class="input" id="email" name="email" type="email" autocomplete="username" placeholder="joao.silva@rotasegura.com" required>
+      </div>
+      <div class="field">
+        <label class="field-label" for="senha">Senha</label>
+        <input class="input" id="senha" name="senha" type="password" autocomplete="current-password" placeholder="••••••••" required>
+      </div>
+      <button class="btn btn-primary" type="submit">Entrar</button>
+      <p class="demo-hint">Conta de demonstração: <strong>joao.silva@rotasegura.com</strong> · senha <strong>rota1234</strong></p>
+      <div style="flex:1"></div>
+      <p class="auth-foot">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </form>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/login.js"></script>
+</body>
+</html>

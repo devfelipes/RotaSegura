@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2462eb">
+  <title>Chat local — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="chat-hero">
+      <div class="who">
+        <span id="avatar"></span>
+        <div class="grow">
+          <div class="n" id="nome"></div>
+          <div class="m" id="email"></div>
+          <span class="badge role"><i data-icon="shield-check" data-size="16"></i><span id="tipo"></span></span>
+        </div>
+        <a class="icon-btn" href="alertas.html" aria-label="Alertas"><i data-icon="bell" data-size="22"></i></a>
+      </div>
+      <h1>Chat local</h1>
+      <p>Informação de quem está no seu caminho.</p>
+    </header>
+
+    <div class="segmented chat-tabs" role="tablist">
+      <button role="tab" onclick="location.href='mapa.html'">Mapa</button>
+      <button role="tab" class="is-on" aria-selected="true">Rede de apoio</button>
+    </div>
+
+    <div class="content">
+      <div class="region-line">
+        <span class="blue"><i data-icon="pin" data-size="24"></i></span>
+        <select id="regiao" aria-label="Região"></select>
+        <span class="online" id="online"></span>
+      </div>
+
+      <div class="rules"><i data-icon="shield-check" data-size="22"></i><span style="flex:1">Respeite a galera. Compartilhe avisos úteis e não exponha dados pessoais.</span><i data-icon="chevron-right" data-size="18"></i></div>
+
+      <div id="off" class="chat-off" hidden>O chat local está desativado. Ative em <a href="privacidade.html">Configurações e Privacidade</a> para ler e enviar mensagens da sua região.</div>
+
+      <div id="mensagens" style="display:flex;flex-direction:column;gap:16px" aria-live="polite"></div>
+
+      <div id="envio">
+        <p class="quick-title" style="margin:8px 0 12px">AVISAR A REDE</p>
+        <div class="quick-grid">
+          <button data-tag="blitz"><span class="ic"><i data-icon="siren" data-size="22"></i></span>Blitz</button>
+          <button data-tag="buraco"><span class="ic"><i data-icon="alert" data-size="22"></i></span>Buraco</button>
+          <button data-tag="assalto"><span class="ic"><i data-icon="shield-alert" data-size="22"></i></span>Risco de assalto</button>
+          <button data-tag="apoio"><span class="ic"><i data-icon="coffee" data-size="22"></i></span>Ponto de apoio</button>
+        </div>
+        <form class="composer" id="form" style="margin-top:16px">
+          <div class="input-wrap">
+            <span class="ic-left"><i data-icon="paperclip" data-size="20"></i></span>
+            <input class="input has-icon-left" name="texto" maxlength="280" placeholder="Escreva uma mensagem..." autocomplete="off" aria-label="Mensagem">
+          </div>
+          <button class="send-btn" type="submit" aria-label="Enviar"><i data-icon="send" data-size="22"></i></button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/chat.js"></script>
+</body>
+</html>

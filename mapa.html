@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Mapa e Rede de apoio — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="map-full" id="mapa">
+      <img class="map-bg" src="assets/img/mapa.png" alt="Mapa da região com pontos de apoio">
+
+      <div class="map-top">
+        <div class="map-title"><strong>Mapa e Rede de apoio</strong><span>RotaSegura</span></div>
+        <button class="ghost-btn" id="invisivel" aria-pressed="false"><i data-icon="ghost" data-size="20"></i><span>Ficar Invisível</span></button>
+      </div>
+
+      <div class="map-filters" id="filtros" role="toolbar" aria-label="Filtrar pontos">
+        <button class="chip is-on" data-f="todos">Todos</button>
+        <button class="chip" data-f="rider">Entregadores</button>
+        <button class="chip" data-f="oficina">Oficinas</button>
+        <button class="chip" data-f="banheiro">Banheiros</button>
+        <button class="chip" data-f="descanso">Descanso</button>
+      </div>
+
+      <div id="pins"></div>
+      <div class="me-dot" style="left:52%;top:61%" title="Você está aqui"></div>
+
+      <div class="anon-pill"><i data-icon="shield-check" data-size="18"></i>Entregadores sempre anônimos</div>
+      <div class="map-fabs" id="fabs">
+        <a class="chat-fab" href="chat.html" aria-label="Abrir chat local"><i data-icon="chat" data-size="30"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/mapa.js"></script>
+</body>
+</html>

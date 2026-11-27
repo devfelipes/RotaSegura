@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Emergência SOS — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app has-footer">
+    <header class="topbar-white">
+      <span class="avatar" style="width:44px;height:44px;background:var(--red-50);color:var(--red-600)"><i data-icon="shield-alert" data-size="22"></i></span>
+      <h1 class="title">Emergência SOS</h1>
+    </header>
+
+    <div class="content center" style="gap:0">
+      <div class="sos-sent-ic"><div><i data-icon="check" data-size="40"></i></div></div>
+      <h2 style="font-size:32px;font-weight:800">SOS Enviado!</h2>
+      <p class="muted" style="font-size:17px;line-height:1.5;margin:10px 20px 26px">Localização compartilhada com seus contatos.</p>
+
+      <section class="card" style="text-align:left">
+        <h3 class="h3" style="margin-bottom:18px">Seu alerta foi enviado</h3>
+        <div class="info-line">
+          <span class="sq"><i data-icon="pin" data-size="22"></i></span>
+          <div><strong>Localização enviada</strong><span id="local">Sua posição no momento do SOS.</span></div>
+        </div>
+        <div class="info-line">
+          <span class="sq"><i data-icon="users" data-size="22"></i></span>
+          <div><strong>Contatos de confiança</strong><span id="contatos">Alerta enviado aos contatos cadastrados.</span></div>
+        </div>
+      </section>
+
+      <div class="danger-note" style="margin-top:18px;text-align:left">
+        <span class="ic"><i data-icon="info" data-size="22"></i></span>
+        <div style="flex:1">Se houver risco imediato, ligue para um serviço de emergência.
+          <div class="btn-row" style="margin-top:12px" id="ligar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <a class="btn btn-red" id="voltar" href="jornada.html">Voltar à jornada</a>
+      <p class="center muted small" style="margin-top:12px">Voltar não desfaz o envio do SOS.</p>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/sos.js"></script>
+</body>
+</html>

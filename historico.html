@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2164cd">
+  <title>Histórico — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app bg-gray">
+    <header class="hist-header">
+      <i data-icon="shield-check" data-size="26"></i>
+      <h1>Histórico</h1>
+      <button class="icon-btn" style="background:none" id="ajuda" aria-label="Ajuda"><i data-icon="help" data-size="26"></i></button>
+    </header>
+
+    <div class="content">
+      <div class="segmented" role="tablist" id="abas">
+        <button role="tab" class="is-on" data-p="semana">Semanal</button>
+        <button role="tab" data-p="mes">Mensal</button>
+      </div>
+
+      <section class="card week-card">
+        <div class="top"><strong id="titulo-periodo">Esta Semana</strong><span><i data-icon="calendar" data-size="16"></i><span id="intervalo"></span></span></div>
+        <div class="kpis">
+          <div><div class="v blue" id="k-horas">0h 00m</div><div class="l">Total de horas</div></div>
+          <div><div class="v" id="k-sessoes">0</div><div class="l">Sessões</div></div>
+          <div><div class="v" id="k-inc">0</div><div class="l">Incidentes<br>reportados</div></div>
+        </div>
+      </section>
+
+      <div class="section-hd" style="margin-top:6px">
+        <h2 style="font-size:20px">As suas jornadas</h2>
+        <span id="dias-trab">0 dias trabalhados</span>
+      </div>
+
+      <section class="card pad-sm filter-bar">
+        <div class="input-wrap">
+          <span class="ic-left"><i data-icon="search" data-size="18"></i></span>
+          <input class="input has-icon-left" id="busca" placeholder="Buscar" aria-label="Buscar jornada">
+        </div>
+        <select class="select" id="periodo" aria-label="Período"></select>
+        <select class="select" id="tipo" aria-label="Filtro">
+          <option value="todos">Todos</option>
+          <option value="incidentes">Com incidentes</option>
+          <option value="sem">Sem incidentes</option>
+        </select>
+      </section>
+
+      <section class="card pad-sm event-chips" id="eventos" aria-label="Filtrar eventos da linha do tempo">
+        <span class="lbl">Eventos</span>
+        <button class="ev ev-inicio" data-ev="inicio"><i data-icon="play" data-size="16"></i>Início</button>
+        <button class="ev ev-pausa" data-ev="pausa"><i data-icon="pause" data-size="16"></i>Pausa</button>
+        <button class="ev ev-sos" data-ev="sos"><i data-icon="siren" data-size="16"></i>SOS</button>
+        <button class="ev ev-ocorrencia" data-ev="ocorrencia"><i data-icon="alert" data-size="16"></i>Ocorrência</button>
+        <button class="ev ev-fim" data-ev="fim"><i data-icon="square" data-size="16"></i>Fim</button>
+      </section>
+
+      <div id="dias" style="display:flex;flex-direction:column;gap:12px"></div>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/historico.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2462eb">
+  <title>Configurações — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="privacy-hero">
+      <div style="display:flex;align-items:center;gap:14px">
+        <a class="icon-btn" href="perfil.html" aria-label="Voltar"><i data-icon="arrow-left" data-size="22"></i></a>
+        <div><h1>Configurações</h1><p>Sua privacidade, do seu jeito.</p></div>
+      </div>
+    </header>
+
+    <section class="card privacy-id">
+      <span id="avatar"></span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:17px;font-weight:700" id="nome"></div>
+        <div class="muted" style="font-size:11px;margin:4px 0 6px;overflow:hidden;text-overflow:ellipsis" id="email"></div>
+        <span class="badge role on-light"><i data-icon="shield-check" data-size="16"></i><span id="tipo"></span></span>
+      </div>
+      <a class="blue" href="dados-pessoais.html" aria-label="Editar perfil"><i data-icon="pencil" data-size="24"></i></a>
+    </section>
+
+    <div class="content" style="gap:14px">
+      <h2 class="h2" style="margin-top:6px">Privacidade e segurança</h2>
+      <section class="card">
+        <h3 style="font-size:13px;font-weight:600;margin-bottom:12px">Quem pode ver seu perfil?</h3>
+        <div class="segmented sm" id="visibilidade">
+          <button data-v="todos">Todos</button><button data-v="contatos">Só contatos</button><button data-v="anonimo">Anônimo</button>
+        </div>
+        <p class="muted" style="font-size:10px;margin:12px 0 6px" id="vis-desc"></p>
+        <div class="rows compact" id="priv"></div>
+      </section>
+
+      <h2 class="h2" style="margin-top:8px">Permissões do aplicativo</h2>
+      <section class="card"><div class="rows compact" id="perms"></div></section>
+
+      <h2 class="h2" style="margin-top:8px">Notificações</h2>
+      <section class="card"><div class="rows compact" id="notif"></div></section>
+
+      <h2 class="h2" style="margin-top:8px">Seus dados</h2>
+      <section class="card">
+        <div class="rows compact">
+          <button class="row" id="baixar" style="width:100%;text-align:left">
+            <span class="row-ic"><i data-icon="download" data-size="22"></i></span>
+            <div class="grow"><div class="row-title">Baixar meus dados</div><div class="row-sub">Uma cópia do perfil e do seu histórico.</div></div>
+            <span class="muted"><i data-icon="chevron-right" data-size="20"></i></span>
+          </button>
+        </div>
+      </section>
+      <p class="lgpd"><span class="ic"><i data-icon="shield-check" data-size="20"></i></span>Você controla seus dados. Tratamos suas informações conforme a LGPD.</p>
+
+      <button class="btn btn-red" id="excluir" style="font-weight:500"><i data-icon="trash" data-size="20"></i>Excluir minha conta</button>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/privacidade.js"></script>
+</body>
+</html>

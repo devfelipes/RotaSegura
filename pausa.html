@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Pausa — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar-white">
+      <h1 class="title">Pausa em andamento</h1>
+      <span class="badge blue">Em pausa</span>
+    </header>
+
+    <section class="pause-hero">
+      <h2>Este tempo é seu.</h2>
+      <p>Respire fundo e relaxe. Uma pausa ajuda você a seguir com mais disposição.</p>
+    </section>
+
+    <div class="content" style="padding-top:22px">
+      <div class="card pause-card" role="timer">
+        <div class="round-ic"><i data-icon="coffee" data-size="26"></i></div>
+        <div class="eyebrow">Tempo restante de pausa</div>
+        <div class="clock" id="restante">15:00</div>
+        <div class="blue" style="font-size:14px" id="sub">Pausa sugerida de 15 minutos</div>
+      </div>
+
+      <div class="tip">
+        <span class="ic-wrap"><i data-icon="glass" data-size="24"></i></span>
+        <div>
+          <strong>Cuide de você</strong>
+          <p id="dica">Beba água e aproveite para alongar o corpo com calma.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="flex:1"></div>
+    <div style="background:var(--white);padding:20px 20px 24px;margin-top:20px">
+      <button class="btn btn-outline-gray" id="encerrar">Encerrar pausa mais cedo</button>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/pausa.js"></script>
+</body>
+</html>

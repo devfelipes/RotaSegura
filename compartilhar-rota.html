@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3b82f6">
+  <title>Compartilhar Rota — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app bg-gray">
+    <header class="topbar-blue light centered">
+      <a class="icon-btn" href="perfil.html" aria-label="Voltar"><i data-icon="arrow-left" data-size="22"></i></a>
+      <h1 class="title with-back">Compartilhar Rota</h1>
+    </header>
+
+    <div class="content">
+      <section class="card">
+        <div class="card-row" style="align-items:flex-start">
+          <div><h2 class="h3" style="font-size:18px">Compartilhamento de Trajeto</h2><div class="status-blue" id="estado">Ativo</div></div>
+          <span id="sw-master"></span>
+        </div>
+        <p class="muted" style="font-size:14px;line-height:1.55;margin-top:12px">Quando ativo, os contatos selecionados acompanham a sua localização apenas durante a jornada.</p>
+      </section>
+
+      <section class="card" id="agora">
+        <h2 class="h3" style="font-size:18px;margin-bottom:16px">Compartilhar agora</h2>
+        <button class="btn btn-light" id="enviar" style="font-weight:600"><i data-icon="whatsapp" data-size="24"></i>Enviar link da rota</button>
+        <button class="btn btn-outline" id="copiar" style="margin-top:12px;font-weight:600"><i data-icon="copy" data-size="22"></i>Copiar link temporário</button>
+        <p class="note-line" style="margin-top:16px"><i data-icon="clock" data-size="18"></i><span id="expira">O link expira automaticamente ao encerrar a jornada.</span></p>
+      </section>
+
+      <section class="card">
+        <h2 class="h3" style="font-size:18px">Quem pode acompanhar sempre</h2>
+        <p class="muted small" id="qtd" style="margin:4px 0 8px"></p>
+        <div class="rows" id="lista"></div>
+        <p class="note-line" style="border-top:1px solid var(--line);padding-top:14px;margin-top:6px"><i data-icon="shield-check" data-size="18"></i>Somente contatos de confiança podem receber seu trajeto.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/compartilhar-rota.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2462eb">
+  <title>Controle financeiro — RotaSegura</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="fin-hero">
+      <a class="icon-btn" href="perfil.html" aria-label="Voltar"><i data-icon="arrow-left" data-size="22"></i></a>
+      <h1>Controle financeiro</h1>
+      <p>Receita, gastos e meta do dia em um só lugar.</p>
+    </header>
+
+    <div class="segmented fin-tabs" id="abas" role="tablist">
+      <button role="tab" class="is-on" data-m="dia">Dia</button>
+      <button role="tab" data-m="semana">Semana</button>
+      <button role="tab" data-m="mes">Mês</button>
+    </div>
+
+    <div class="content">
+      <div class="date-nav">
+        <button id="ant" aria-label="Período anterior"><i data-icon="chevron-left" data-size="22"></i></button>
+        <span><span class="ic"><i data-icon="calendar" data-size="20"></i></span><span id="data"></span></span>
+        <button id="prox" aria-label="Próximo período"><i data-icon="chevron-right" data-size="22"></i></button>
+      </div>
+
+      <section class="balance">
+        <div class="top"><span id="saldo-lbl">Saldo líquido do dia</span><i data-icon="wallet" data-size="24"></i></div>
+        <div class="big" id="saldo">R$ 0,00</div>
+        <div class="split">
+          <div><span><i data-icon="arrow-down-left" data-size="16"></i>Ganhos</span><strong id="ganhos">R$ 0,00</strong></div>
+          <div><span><i data-icon="arrow-up-right" data-size="16"></i>Gastos</span><strong id="gastos">R$ 0,00</strong></div>
+        </div>
+      </section>
+
+      <section class="card goal" id="meta" role="button" tabindex="0" aria-label="Editar meta" style="cursor:pointer">
+        <div class="hd"><strong id="meta-tit">Sua meta diária</strong><span id="meta-pct">0% alcançada</span></div>
+        <div class="vals"><span class="blue" id="meta-val">R$ 0,00</span><span id="meta-de">de R$ 0,00 em ganhos</span></div>
+        <div class="progress"><i id="meta-bar" style="width:0"></i></div>
+        <div class="foot" id="meta-msg"></div>
+      </section>
+
+      <section class="card chart-card">
+        <div class="hd"><strong class="h3">Ritmo da semana</strong><span class="muted small" id="ritmo-int"></span></div>
+        <div class="legend">Ganhos por dia · R$</div>
+        <div class="bars" id="bars"></div>
+      </section>
+
+      <div class="fin-actions">
+        <button class="btn btn-primary" id="add-ganho"><i data-icon="plus" data-size="22"></i>Adicionar ganho</button>
+        <button class="btn btn-outline" id="add-gasto"><i data-icon="minus" data-size="22"></i>Adicionar gasto</button>
+      </div>
+
+      <a class="fin-link" href="lancamentos.html"><i data-icon="list" data-size="22"></i><span class="grow">Ver ganhos e gastos</span><i data-icon="arrow-right" data-size="22"></i></a>
+      <p class="center muted small" id="rodape">Seu saldo considera todos os lançamentos do dia.</p>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/negocio.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/paginas/financeiro-form.js"></script>
+  <script src="js/paginas/financeiro.js"></script>
+</body>
+</html>
